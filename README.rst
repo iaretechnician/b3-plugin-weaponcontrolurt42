@@ -42,10 +42,8 @@ commands
 Defines the level/group required by a player to use the commands brought by this plugin.
 
 A command alias can be defined by adding it after the command name and a '-'.
-
-  `weaponcontrol: admin` defines that the _!weaponcontrol_ command can be used by admins or players of higher level group.
-
-  `weaponcontrol-gear2: admin` defines that the _!weaponcontrol_ command can be used by admins or players of higher level group and defines the alias _!gear2_.
+`weaponcontrol: admin` defines that the _!weaponcontrol_ command can be used by admins or players of higher level group.
+`weaponcontrol-gear2: admin` defines that the _!weaponcontrol_ command can be used by admins or players of higher level group and defines the alias _!gear2_.
 
 
 
