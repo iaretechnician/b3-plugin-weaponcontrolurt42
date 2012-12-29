@@ -10,7 +10,7 @@ Description
 This plugin allows to define a set of weapon/item not allowed on your server.
 When a players take a forbidden weapon/item, he will be moved to the spectator team and advised to change its gear.
 
-This plugin allows finer restriction than the vanilla `g_gear` cvar. For instance you can disallow smoke grenades while
+This plugin allows finer restriction than the vanilla ``g_gear`` cvar. For instance you can disallow smoke grenades while
 allowing HE grenades.
 
 
@@ -42,8 +42,10 @@ commands
 Defines the level/group required by a player to use the commands brought by this plugin.
 
 A command alias can be defined by adding it after the command name and a '-'.
-`weaponcontrol: admin` defines that the _!weaponcontrol_ command can be used by admins or players of higher level group.
-`weaponcontrol-gear2: admin` defines that the _!weaponcontrol_ command can be used by admins or players of higher level group and defines the alias _!gear2_.
+
+``weaponcontrol: admin`` defines that the ``!weaponcontrol`` command can be used by admins or players of higher level group.
+
+``weaponcontrol-gear2: admin`` defines that the ``!weaponcontrol`` command can be used by admins or players of higher level group and defines the alias ``!gear2``.
 
 
 
@@ -52,9 +54,9 @@ allowed weapons
 
 Defines what weapon/item players are allowed to carry.
 
-Put `yes` as a value for a weapon/item you allow.
+Put ``yes`` as a value for a weapon/item you allow.
 
-Put `no` as a value for a weapon/item you forbid.
+Put ``no`` as a value for a weapon/item you forbid.
 
 
 In-game user guide
@@ -112,7 +114,7 @@ and so on with the following weap/item codes :
 Tip
 ^^^
 
-`!weaponcontrol -sil` and `!weaponcontrol -silencer` are equivalent. only the first 3 letters are checked to recognise the weapon/item
+``!weaponcontrol -sil`` and ``!weaponcontrol -silencer`` are equivalent. only the first 3 letters are checked to recognise the weapon/item.
 
 
 
