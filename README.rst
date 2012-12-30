@@ -28,7 +28,7 @@ Installation
 - copy plugin_weaponcontrolurt42.cfg in the same directory as your b3.xml
 - add to the plugins section of your main b3 config file::
 
-  <plugin name="weaponcontrolurt42" config="@conf/plugin_poweradminbf3.cfg" />
+  <plugin name="weaponcontrolurt42" config="@conf/plugin_weaponcontrolurt42.cfg" />
 
 
 Configuration
