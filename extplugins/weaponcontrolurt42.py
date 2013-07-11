@@ -28,8 +28,8 @@ from b3.events import EVT_CLIENT_TEAM_CHANGE
 Urban Terror doc on gear : http://www.urbanterror.info/support/120-gears/#3
 """
 
-__version__ = '1.0'
-__author__  = 'Courgette'
+__version__ = '1.1'
+__author__  = 'Courgette, Fenix'
 
 class Weaponcontrolurt42Plugin(Plugin):
     _forbiddenWeapons = set()

@@ -133,6 +133,6 @@ Changelog
 1.0 - 2012-12-29
   - first release
 
-1.0.1 - 2013-07-11 (Fenix)
+1.1 - 2013-07-11 (Fenix)
   - added support for Colt 1911 and Ingram MAC-11 (available since Urban Terror 4.2.013 release)
 
