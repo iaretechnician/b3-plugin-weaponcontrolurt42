@@ -90,9 +90,11 @@ and so on with the following weap/item codes :
   - ber : Beretta 92G
   - de : Desert Eagle
   - glo : Glock
+  - col : Colt 1911
   - spa : SPAS-12
   - mp : MP5K
   - ump : UMP45
+  - mac : MAC-11
   - hk : HK69
   - lr : LR300ML
   - g36 : G36
@@ -129,8 +131,8 @@ Changelog
 ---------
 
 1.0 - 2012-12-29
-  first release
+  - first release
 
-
-
+1.0.1 - 2013-07-11 (Fenix)
+  - added support for Colt 1911 and Ingram MAC-11 (available since Urban Terror 4.2.013 release)
 
