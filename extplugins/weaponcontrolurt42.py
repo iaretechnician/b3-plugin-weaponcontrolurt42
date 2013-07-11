@@ -39,9 +39,11 @@ class Weaponcontrolurt42Plugin(Plugin):
         'beretta 92g': 'F',
         'desert eagle': 'G',
         'glock': 'f',
+        'colt 1911': 'g',
         'spas-12': 'H',
         'mp5k': 'I',
         'ump45': 'J',
+        'mac-11': 'h',
         'hk69': 'K',
         'lr300ml': 'L',
         'g36': 'M',
@@ -149,7 +151,7 @@ class Weaponcontrolurt42Plugin(Plugin):
         """\
         set restrictions on weapon choice
         all|reset
-        [+|-]ber|de|glo|spas|mp5|ump|hk|lr|g36|psg|sr8|ak|neg|he|smoke|kev|hel|sil|laser|med|nvg|xtra
+        [+|-]ber|de|glo|colt|spas|mp5|ump|mac|hk|lr|g36|psg|sr8|ak|neg|he|smoke|kev|hel|sil|laser|med|nvg|xtra
         """
         # Consultation mode
         if not data:
@@ -166,8 +168,8 @@ class Weaponcontrolurt42Plugin(Plugin):
         # Modification mode
         # User input validation
         if not data[:4] in ('all', 'rese',
-                            '+ber', '+de', '+glo', '+spa', '+mp5', '+ump', '+hk', '+lr', '+g36', '+psg', '+sr8', '+ak', '+neg', '+m4', '+he', '+smo', '+kev', '+hel', '+sil', '+las', '+med', '+nvg', '+xtr',
-                            '-ber', '-de', '-glo', '-spa', '-mp5', '-ump', '-hk', '-lr', '-g36', '-psg', '-sr8', '-ak', '-neg', '-m4', '-he', '-smo', '-kev', '-hel', '-sil', '-las', '-med', '-nvg', '-xtr'):
+                            '+ber', '+de', '+glo', '+col', '+spa', '+mp5', '+ump', '+mac', '+hk', '+lr', '+g36', '+psg', '+sr8', '+ak', '+neg', '+m4', '+he', '+smo', '+kev', '+hel', '+sil', '+las', '+med', '+nvg', '+xtr',
+                            '-ber', '-de', '-glo', '-col', '-spa', '-mp5', '-ump', '-mac', '-hk', '-lr', '-g36', '-psg', '-sr8', '-ak', '-neg', '-m4', '-he', '-smo', '-kev', '-hel', '-sil', '-las', '-med', '-nvg', '-xtr'):
             if client:
                 client.message('^7Invalid data, usage: %s%s' % (cmd.prefix, cmd.command))
                 for line in self.cmd_weaponcontrol.__doc__.split("\n"):
@@ -256,12 +258,16 @@ class Weaponcontrolurt42Plugin(Plugin):
             return 'G'
         if data[:2] == 'gl': # Glock
             return 'f'
+        if data[:3] == 'col': # Colt 1911
+            return 'g'
         if data[:3] == 'spa': # SPAS
             return 'H'
         if data[:2] == 'mp': # MP5K
             return 'I'
         if data[:3] == 'ump': # UMP45
             return 'J'
+        if data[:3] == 'mac': # MAC-11
+            return 'h'
         if data[:2] == 'hk': # HK69
             return 'K'
         if data[:2] == 'lr': # LR300ML
