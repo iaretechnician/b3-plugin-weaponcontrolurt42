@@ -33,7 +33,13 @@ class Test_get_weapon_letter_from_user_input(Test_plugin):
         self.assertEqual('f', self.p.get_weapon_letter_from_user_input("glock"))
         self.assertEqual('f', self.p.get_weapon_letter_from_user_input("glo"))
         self.assertEqual('f', self.p.get_weapon_letter_from_user_input("gl"))
-
+    
+    def test_colt(self):
+        self.assertEqual('g', self.p.get_weapon_letter_from_user_input("Colt 1911"))
+        self.assertEqual('g', self.p.get_weapon_letter_from_user_input("Colt"))
+        self.assertEqual('g', self.p.get_weapon_letter_from_user_input("colt"))
+        self.assertEqual('g', self.p.get_weapon_letter_from_user_input("col"))
+        
     def test_spas12(self):
         self.assertEqual('H', self.p.get_weapon_letter_from_user_input("spas-12"))
         self.assertEqual('H', self.p.get_weapon_letter_from_user_input("spas"))
@@ -47,7 +53,12 @@ class Test_get_weapon_letter_from_user_input(Test_plugin):
     def test_ump45(self):
         self.assertEqual('J', self.p.get_weapon_letter_from_user_input("ump45"))
         self.assertEqual('J', self.p.get_weapon_letter_from_user_input("ump"))
-
+    
+    def test_mac11(self):
+        self.assertEqual('h', self.p.get_weapon_letter_from_user_input("MAC-11"))
+        self.assertEqual('h', self.p.get_weapon_letter_from_user_input("mac-11"))
+        self.assertEqual('h', self.p.get_weapon_letter_from_user_input("mac"))
+        
     def test_kevlar_helmet(self):
         self.assertEqual('W', self.p.get_weapon_letter_from_user_input("helmet"))
         self.assertEqual('W', self.p.get_weapon_letter_from_user_input("hel"))

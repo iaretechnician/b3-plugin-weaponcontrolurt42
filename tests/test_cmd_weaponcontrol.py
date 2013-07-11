@@ -83,7 +83,7 @@ weaponcontrol-wpctrl: 60
         self.assertEqual(['Invalid data, usage: !weaponcontrol',
                           'set restrictions on weapon choice',
                           'all|reset',
-                          '[+|-]ber|de|glo|spas|mp5|ump|hk|lr|g36|psg|sr8|ak|neg|he|smoke|kev|hel|sil|laser|med|nvg|xtra'],
+                          '[+|-]ber|de|glo|colt|spas|mp5|ump|mac|hk|lr|g36|psg|sr8|ak|neg|he|smoke|kev|hel|sil|laser|med|nvg|xtra'],
             self.superadmin.message_history)
 
 

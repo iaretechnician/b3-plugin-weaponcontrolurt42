@@ -118,7 +118,7 @@ class Test_load_conf_forbidden_weapons(Iourt42TestCase):
         self.assertListEqual([call('No forbidden weapon loaded from config'),
                               call('Other weapons you could set in the config : kevlar helmet, laser sight, beretta 92g, m4a1, '
                                    'psg-1, desert eagle, kevlar vest, sr-8, glock, spas-12, ump45, nvgs, hk69, silencer, extra '
-                                   'ammo, ak-103, mp5k, negev, he grenade, g36, smoke grenade, medkit, lr300ml')], self.info_mock.mock_calls)
+                                   'ammo, ak-103, mp5k, negev, he grenade, g36, smoke grenade, medkit, lr300ml, colt 1911, mac-11')], self.info_mock.mock_calls)
 
     def test_empty_section(self):
         # GIVEN
@@ -134,7 +134,7 @@ class Test_load_conf_forbidden_weapons(Iourt42TestCase):
         self.assertListEqual([call('No forbidden weapon loaded from config'),
                               call('Other weapons you could set in the config : kevlar helmet, laser sight, beretta 92g, m4a1, '
                                    'psg-1, desert eagle, kevlar vest, sr-8, glock, spas-12, ump45, nvgs, hk69, silencer, extra '
-                                   'ammo, ak-103, mp5k, negev, he grenade, g36, smoke grenade, medkit, lr300ml')], self.info_mock.mock_calls)
+                                   'ammo, ak-103, mp5k, negev, he grenade, g36, smoke grenade, medkit, lr300ml, colt 1911, mac-11')], self.info_mock.mock_calls)
 
 
     def test_all_weapons_explicitly_allowed(self):
@@ -144,9 +144,11 @@ class Test_load_conf_forbidden_weapons(Iourt42TestCase):
 Beretta 92G: yes
 Desert Eagle: 1
 Glock: on
+Colt 1911: yes
 SPAS-12: YES
 MP5K: true
 UMP45: yes
+MAC-11: 1
 HK69: yes
 LR300ML: yes
 G36: yes
@@ -180,9 +182,11 @@ Extra Ammo: yes
 Beretta 92G: no
 Desert Eagle: 0
 Glock: off
+Colt 1911: off
 SPAS-12: NO
 MP5K: false
 UMP45: no
+MAC-11: 0
 HK69: no
 LR300ML: no
 G36: no
@@ -219,10 +223,12 @@ Extra Ammo: no
 [allowed weapons]
 Beretta 92G: yes
 Desert Eagle: yes
+Colt 1911: on
 Glock: no
 SPAS-12: yes
 MP5K: yes
 UMP45: yes
+MAC-11: yes
 HK69: yes
 LR300ML: yes
 G36: yes
@@ -256,9 +262,11 @@ Extra Ammo: yes
 [allowed weapons]
 Beretta 92G: yes
 Desert Eagle: yes
+Colt 1911: yes
 SPAS-12: yes
 MP5K: yes
 UMP45: yes
+MAC-11: yes
 HK69: yes
 LR300ML: yes
 G36: yes
@@ -293,9 +301,11 @@ Extra Ammo: yes
 Beretta 92G: yes
 Desert Eagle: 1
 Glock: on
+Colt 1911: on
 SPAS-12: YES
 MP5K: true
 UMP45: yes
+MAC-11: yes
 HK69: yes
 LR300ML: yes
 G36: yes
@@ -322,7 +332,7 @@ f00: yes
         self.assertListEqual([call("Unknown weapon found in config: 'f00'. Expected weapons are : 'kevlar helmet', 'las"
                                    "er sight', 'beretta 92g', 'm4a1', 'psg-1', 'desert eagle', 'kevlar vest', 'sr-8', '"
                                    "glock', 'spas-12', 'negev', 'nvgs', 'hk69', 'silencer', 'extra ammo', 'ak-103', 'mp"
-                                   "5k', 'ump45', 'he grenade', 'g36', 'smoke grenade', 'medkit', 'lr300ml'")],
+                                   "5k', 'ump45', 'he grenade', 'g36', 'smoke grenade', 'medkit', 'lr300ml', 'colt 1911', 'mac-11'")],
             self.error_mock.mock_calls)
         self.assertListEqual([], self.warning_mock.mock_calls)
         self.assertListEqual([call('No forbidden weapon loaded from config')], self.info_mock.mock_calls)
