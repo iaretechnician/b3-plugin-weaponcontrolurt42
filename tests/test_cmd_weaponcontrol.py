@@ -104,7 +104,7 @@ glock: no
         # THEN
         self.assertEqual(0, len(self.p._forbiddenWeapons))
         self.assertListEqual([], self.superadmin.message_history)
-        self.assertListEqual([call('say  ^7All weapons/items allowed')], self.write_mock.mock_calls)
+        self.assertListEqual([call('say ^7All weapons/items allowed')], self.write_mock.mock_calls)
         assert not self.p.check_connected_players.called
 
     def test_reset(self):
@@ -127,7 +127,7 @@ Smoke Grenade: no
         # THEN
         self.assertEqual(original_restrictions, self.p._forbiddenWeapons)
         self.assertListEqual([], self.superadmin.message_history)
-        self.assertListEqual([call('say  ^7Weapon restrictions: smoke grenade, glock')], self.write_mock.mock_calls)
+        self.assertListEqual([call('say ^7Weapon restrictions: smoke grenade, glock')], self.write_mock.mock_calls)
         assert self.p.check_connected_players.called
 
 
@@ -151,7 +151,7 @@ Smoke Grenade: no
         # THEN
         self.assertEqual(original_restrictions, self.p._forbiddenWeapons)
         self.assertListEqual([], self.superadmin.message_history)
-        self.assertListEqual([call('say  ^7Weapon restrictions: smoke grenade, glock')], self.write_mock.mock_calls)
+        self.assertListEqual([call('say ^7Weapon restrictions: smoke grenade, glock')], self.write_mock.mock_calls)
         assert self.p.check_connected_players.called
 
 
@@ -173,7 +173,7 @@ Smoke Grenade: yes
         # THEN
         self.assertSetEqual(set(['f']), self.p._forbiddenWeapons)
         self.assertListEqual([], self.superadmin.message_history)
-        self.assertListEqual([call('say  ^4glock^7 is now ^1disallowed')], self.write_mock.mock_calls)
+        self.assertListEqual([call('say ^4glock^7 is now ^1disallowed')], self.write_mock.mock_calls)
         assert self.p.check_connected_players.called
 
 
@@ -215,7 +215,7 @@ glock: no
         # THEN
         self.assertSetEqual(set(), self.p._forbiddenWeapons)
         self.assertListEqual([], self.superadmin.message_history)
-        self.assertListEqual([call('say  ^4glock^7 is now ^2allowed')], self.write_mock.mock_calls)
+        self.assertListEqual([call('say ^4glock^7 is now ^2allowed')], self.write_mock.mock_calls)
         assert not self.p.check_connected_players.called
 
 
